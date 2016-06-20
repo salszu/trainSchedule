@@ -6,21 +6,21 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://bootswatch.com/slate/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
     <script src="assets/js/moment.js" type="text/javascript"></script>
-    
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron text-center col-lg-8 col-lg-offset-2">
             <h1>
-				Trains n' things
-			</h1>
+                Trains n' things
+            </h1>
             <h3>
-				To be announced: things 
-			</h3>
+                To be announced: things 
+            </h3>
         </div>
         <div class="row">
             <div class="col-lg-12">
@@ -31,11 +31,11 @@
                     <div class="panel-body">
                         <table class="table table-striped" id="trainInfo">
                             <tr>
-                                <th>Train Line</th>
-                                <th>Destination</th>
-                                <th>Frequency [minutes]</th>
-                                <th>Next Arrival</th>
-                                <th>Minutes till Arrival</th>
+                                <th><strong class="fa fa-train"> Train Line</strong></th>
+                                <th><strong class="fa fa-map-marker"> Destination</strong></th>
+                                <th><strong class="fa fa-clock-o"> Frequency [minutes]</strong></th>
+                                <th><strong class="fa fa-arrow-right"> Next Arrival</strong></th>
+                                <th><strong class="fa fa-level-down"> Minutes till Arrival</strong></th>
                             </tr>
                         </table>
                     </div>
@@ -66,7 +66,7 @@
                                 <label for="trainFrequency">Frequency (min)</label>
                                 <input type="trainFrequency" class="form-control text-center" id="trainFrequency">
                             </div>
-                            <button type="submit" class="btn btn-primary" id="submitTrain">Submit</button>
+                            <button type="submit" class="btn btn-success" id="submitTrain"><strong>Submit</strong></button>
                         </form>
                     </div>
                 </div>
@@ -75,9 +75,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="assets/js/script.js" type="text/javascript"></script>
-    
-    
-    
 </body>
 
 </html>
