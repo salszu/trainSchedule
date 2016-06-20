@@ -9,10 +9,10 @@
     	//add train button
     $('#submitTrain').on('click', function() {
     		//user input
-        name = $('#trainName').val();
-        destination = $('#trainDestination').val();
-        time = $('#trainTime').val();
-        frequency = $('#trainFrequency').val();
+        name = $('#trainName').val().trim();
+        destination = $('#trainDestination').val().trim();
+        time = moment($('#trainTime').val().trim(), "HH:mm").subtract(10, "years").format("X");
+        frequency = $('#trainFrequency').val().trim();
         	//push to firebase
         trainInput.push({
             name: name,
@@ -36,7 +36,7 @@ trainInput.on("child_added", function(childSnapshot, prevChildKey){
 	var inputName = childSnapshot.val().name;
 	var inputDestination = childSnapshot.val().destination;
 	var inputFrequency = childSnapshot.val().frequency;
-	var inputFirstTrain = childSnapshot.val().firstTrain;
+	var inputFirstTrain = childSnapshot.val().time;
 
 	var differenceTimes = moment().diff(moment.unix(inputFirstTrain), "minutes");
 	var trainRemainder = moment().diff(moment.unix(inputFirstTrain), "minutes") % inputFrequency;
